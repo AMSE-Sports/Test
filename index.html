@@ -1,0 +1,17 @@
+<!doctype html>
+<html><head><meta charset='utf-8'><meta name='viewport' content='width=device-width, initial-scale=1'>
+<title>Test</title><link rel="icon" href="data:,">
+</head><body>
+<select id="v-country"></select>
+<select id="v-province"></select>
+<script>
+const COUNTRIES=["Thailand","Japan"]; const THAI_PROVINCES=["ชลบุรี","กรุงเทพมหานคร"];
+document.addEventListener('DOMContentLoaded',()=>{
+  const c=document.getElementById('v-country'); const p=document.getElementById('v-province');
+  c.innerHTML=''; const ph=document.createElement('option'); ph.value=''; ph.textContent='— เลือกประเทศ / Select —'; c.appendChild(ph);
+  COUNTRIES.forEach(x=>{ const o=document.createElement('option'); o.value=x; o.textContent=x; c.appendChild(o); });
+  c.value='Thailand';
+  p.innerHTML=''; THAI_PROVINCES.forEach(x=>{ const o=document.createElement('option'); o.value=x; o.textContent=x; p.appendChild(o); });
+});
+</script>
+</body></html>
